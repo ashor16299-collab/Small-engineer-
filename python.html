@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,10 @@
     <title>Python | المهندس الصغير</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -19,12 +24,17 @@
             background: linear-gradient(135deg, #111827, #2563eb);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 45px 20px;
         }
 
         header h1 {
-            font-size: 38px;
             margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 19px;
+            margin-top: 8px;
         }
 
         .container {
@@ -38,37 +48,43 @@
             padding: 25px;
             margin-bottom: 20px;
             border-radius: 18px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
 
-        h2 {
+        .card h2 {
             color: #2563eb;
+            margin-top: 0;
         }
 
         pre {
             direction: ltr;
             text-align: left;
             background: #111827;
-            color: #fff;
+            color: white;
             padding: 18px;
             border-radius: 12px;
             overflow-x: auto;
+            font-size: 15px;
         }
 
-        .button {
+        .back {
             display: inline-block;
             background: #2563eb;
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 12px 22px;
             border-radius: 10px;
         }
 
+        .back:hover {
+            background: #1d4ed8;
+        }
+
         footer {
-            text-align: center;
             background: #111827;
             color: white;
-            padding: 20px;
+            text-align: center;
+            padding: 25px;
             margin-top: 30px;
         }
     </style>
@@ -76,92 +92,104 @@
 
 <body>
 
-<header>
-    <h1>🐍 تعلم Python</h1>
-    <p>من الصفر إلى أول مشروع برمجي 🚀</p>
-</header>
+    <header>
+        <h1>🐍 تعلم Python</h1>
+        <p>ابدأ البرمجة من الصفر 🚀</p>
+    </header>
 
-<main class="container">
+    <main class="container">
 
-    <div class="card">
-        <h2>👋 ما هي Python؟</h2>
+        <section class="card">
+            <h2>👋 ما هي Python؟</h2>
 
-        <p>
-            Python هي لغة برمجة سهلة ومناسبة جدًا للمبتدئين،
-            ويمكن استخدامها في الكثير من المجالات.
-        </p>
-    </div>
+            <p>
+                Python لغة برمجة سهلة وقوية ومناسبة جدًا للمبتدئين.
+                يمكنك استخدامها في بناء البرامج والمشاريع المختلفة.
+            </p>
+        </section>
 
-    <div class="card">
-        <h2>📦 أول برنامج لك</h2>
+        <section class="card">
+            <h2>🔥 أول برنامج</h2>
 
-        <p>جرب أول أمر في Python:</p>
+            <p>جرب أول أمر لك في Python:</p>
 
-        <pre>print("Never give Up 😎")</pre>
+            <pre>print("Never give Up 😎")</pre>
 
-        <p>
-            الأمر <b>print</b> يستخدم لعرض النصوص والنتائج.
-        </p>
-    </div>
+            <p>
+                الأمر <b>print()</b> يستخدم لعرض النصوص والنتائج.
+            </p>
+        </section>
 
-    <div class="card">
-        <h2>📌 المتغيرات</h2>
+        <section class="card">
+            <h2>📦 المتغيرات</h2>
 
-        <p>يمكنك تخزين البيانات داخل متغير:</p>
+            <p>المتغير يستخدم لتخزين البيانات.</p>
 
-        <pre>name = "Ahmed"
+            <pre>name = "Ahmed"
 age = 16
 
 print(name)
 print(age)</pre>
-    </div>
+        </section>
 
-    <div class="card">
-        <h2>⌨️ إدخال البيانات</h2>
+        <section class="card">
+            <h2>⌨️ إدخال البيانات</h2>
 
-        <p>يمكن جعل البرنامج يطلب بيانات من المستخدم:</p>
+            <p>يمكن للبرنامج أن يطلب بيانات من المستخدم:</p>
 
-        <pre>name = input("اكتب اسمك: ")
+            <pre>name = input("اكتب اسمك: ")
 
 print("أهلاً يا", name)</pre>
-    </div>
+        </section>
 
-    <div class="card">
-        <h2>🧠 ماذا سنتعلم؟</h2>
+        <section class="card">
+            <h2>➕ العمليات الحسابية</h2>
 
-        <ul>
-            <li>المتغيرات</li>
-            <li>الشروط</li>
-            <li>الحلقات</li>
-            <li>الدوال</li>
-            <li>القوائم</li>
-            <li>المشاريع الصغيرة</li>
-        </ul>
-    </div>
+            <pre>a = 10
+b = 5
 
-    <div class="card">
-        <h2>🔥 تحدي صغير</h2>
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)</pre>
+        </section>
 
-        <p>
-            اكتب برنامجًا يطلب اسم المستخدم ثم يطبع:
-            أهلاً يا + الاسم.
-        </p>
+        <section class="card">
+            <h2>🧠 ماذا ستتعلم؟</h2>
 
-        <p>مثال:</p>
+            <ul>
+                <li>المتغيرات</li>
+                <li>الشروط</li>
+                <li>الحلقات</li>
+                <li>الدوال</li>
+                <li>القوائم</li>
+                <li>المشاريع البرمجية</li>
+            </ul>
+        </section>
 
-        <pre>name = input("اكتب اسمك: ")
+        <section class="card">
+            <h2>🔥 تحدي صغير</h2>
+
+            <p>
+                اكتب برنامجًا يطلب اسم المستخدم ثم يطبع رسالة ترحيب.
+            </p>
+
+            <pre>name = input("اكتب اسمك: ")
 print("أهلاً يا", name)</pre>
-    </div>
+        </section>
 
-    <a class="button" href="index.html">
-        🏠 العودة للرئيسية
-    </a>
+        <a class="back" href="index.html">
+            🏠 العودة إلى الصفحة الرئيسية
+        </a>
 
-</main>
+    </main>
 
-<footer>
-    © 2026 المهندس الصغير 👨‍💻
-</footer>
+    <footer>
+        © 2026 المهندس الصغير 👨‍💻
+        <br>
+        تعلم • برمج • طوّر نفسك 🚀
+    </footer>
 
 </body>
+
 </html>
