@@ -1,1 +1,563 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>المهندس الصغير | برامج وتطبيقات نادرة</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        /* ===== Header ===== */
+
+        header {
+            background: linear-gradient(135deg, #111827, #2563eb);
+            color: white;
+            padding: 20px 15px 70px;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            max-width: 900px;
+            margin: 70px auto 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #e5e7eb;
+        }
+
+        /* ===== Search ===== */
+
+        .search-box {
+            max-width: 650px;
+            margin: 30px auto 0;
+            display: flex;
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+            outline: none;
+            direction: rtl;
+        }
+
+        .search-box button {
+            border: none;
+            background: #2563eb;
+            color: white;
+            padding: 0 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* ===== Main ===== */
+
+        .container {
+            max-width: 1100px;
+            margin: -35px auto 0;
+            padding: 0 15px 40px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #2563eb;
+        }
+
+        /* ===== Categories ===== */
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .category {
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 16px;
+            background: #f8fafc;
+            text-decoration: none;
+            color: #111827;
+            border: 1px solid #e5e7eb;
+            transition: 0.25s;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            border-color: #2563eb;
+            box-shadow: 0 8px 20px rgba(37,99,235,0.12);
+        }
+
+        .category .icon {
+            font-size: 42px;
+        }
+
+        .category h3 {
+            margin: 8px 0 0;
+        }
+
+        /* ===== Programs ===== */
+
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .program {
+            border: 1px solid #e5e7eb;
+            border-radius: 17px;
+            overflow: hidden;
+            background: white;
+            transition: 0.25s;
+        }
+
+        .program:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .program-icon {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eff6ff;
+            font-size: 55px;
+        }
+
+        .program-content {
+            padding: 18px;
+        }
+
+        .program-content h3 {
+            margin-top: 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 3px 9px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .download {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 10px;
+            border-radius: 9px;
+            margin-top: 12px;
+        }
+
+        .download:hover {
+            background: #1d4ed8;
+        }
+
+        /* ===== Notice ===== */
+
+        .notice {
+            background: #fff7ed;
+            border-right: 5px solid #f97316;
+        }
+
+        .notice h2 {
+            color: #c2410c;
+        }
+
+        /* ===== Footer ===== */
+
+        footer {
+            background: #111827;
+            color: #d1d5db;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* ===== Mobile ===== */
+
+        @media (max-width: 650px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero {
+                margin-top: 45px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .search-box button {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== Header ===== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                👨‍💻 المهندس الصغير
+            </div>
+
+            <div>
+                <a href="#home">الرئيسية</a>
+                <a href="#categories">الأقسام</a>
+                <a href="#programs">البرامج</a>
+                <a href="#about">عن الموقع</a>
+            </div>
+
+        </nav>
+
+        <div class="hero" id="home">
+
+            <h1>📦 برامج وتطبيقات نادرة</h1>
+
+            <p>
+                اكتشف برامج وتطبيقات قديمة وخفيفة ومفيدة
+                لأجهزة الكمبيوتر والموبايل.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="ابحث عن برنامج أو تطبيق..."
+                >
+
+                <button onclick="searchPrograms()">
+                    🔍 بحث
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- ===== Categories ===== -->
+
+        <section class="section" id="categories">
+
+            <h2>📂 الأقسام</h2>
+
+            <div class="categories">
+
+                <a class="category" href="#">
+                    <div class="icon">📱</div>
+                    <h3>Android</h3>
+                    <p>تطبيقات وأدوات للموبايل</p>
+                </a>
+
+                <a class="category" href="#">
+                    <div class="icon">💻</div>
+                    <h3>Windows</h3>
+                    <p>برامج للكمبيوتر</p>
+                </a>
+
+                <a class="category" href="#">
+                    <div class="icon">🕰️</div>
+                    <h3>برامج قديمة</h3>
+                    <p>إصدارات نادرة وقديمة</p>
+                </a>
+
+                <a class="category" href="#">
+                    <div class="icon">🪶</div>
+                    <h3>برامج خفيفة</h3>
+                    <p>مناسبة للأجهزة الضعيفة</p>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===== Featured Programs ===== -->
+
+        <section class="section" id="programs">
+
+            <h2>🔥 برامج مميزة</h2>
+
+            <div class="programs">
+
+                <article class="program">
+
+                    <div class="program-icon">
+                        📱
+                    </div>
+
+                    <div class="program-content">
+
+                        <span class="tag">Android</span>
+
+                        <h3>تطبيق نادر</h3>
+
+                        <p>
+                            وصف مختصر للتطبيق ومعلومات عنه.
+                        </p>
+
+                        <a class="download" href="#">
+                            صفحة البرنامج
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="program">
+
+                    <div class="program-icon">
+                        💻
+                    </div>
+
+                    <div class="program-content">
+
+                        <span class="tag">Windows</span>
+
+                        <h3>برنامج خفيف</h3>
+
+                        <p>
+                            برنامج مناسب للأجهزة القديمة.
+                        </p>
+
+                        <a class="download" href="#">
+                            صفحة البرنامج
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="program">
+
+                    <div class="program-icon">
+                        🕰️
+                    </div>
+
+                    <div class="program-content">
+
+                        <span class="tag">قديم</span>
+
+                        <h3>برنامج نادر</h3>
+
+                        <p>
+                            إصدار قديم محفوظ للأرشفة.
+                        </p>
+
+                        <a class="download" href="#">
+                            صفحة البرنامج
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="program">
+
+                    <div class="program-icon">
+                        🛠️
+                    </div>
+
+                    <div class="program-content">
+
+                        <span class="tag">Tools</span>
+
+                        <h3>أداة مفيدة</h3>
+
+                        <p>
+                            أداة صغيرة لأداء مهمة محددة.
+                        </p>
+
+                        <a class="download" href="#">
+                            صفحة البرنامج
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===== Notice ===== -->
+
+        <section class="section notice">
+
+            <h2>⚠️ ملاحظة مهمة</h2>
+
+            <p>
+                الموقع مخصص لأرشفة واكتشاف البرامج والتطبيقات
+                التي يسمح أصحاب حقوقها بإعادة توزيعها.
+            </p>
+
+            <p>
+                لن يتم نشر البرامج المقرصنة أو الكراكات
+                أو مفاتيح التفعيل غير القانونية.
+            </p>
+
+        </section>
+
+
+        <!-- ===== About ===== -->
+
+        <section class="section" id="about">
+
+            <h2>ℹ️ عن الموقع</h2>
+
+            <p>
+                <strong>المهندس الصغير</strong> مشروع عربي
+                يهتم باكتشاف البرامج والتطبيقات القديمة
+                والخفيفة والمفتوحة المصدر، مع تقديم معلومات
+                مفيدة عنها بطريقة بسيطة.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ===== Footer ===== -->
+
+    <footer>
+
+        <strong>👨‍💻 المهندس الصغير</strong>
+
+        <br>
+
+        برامج • تطبيقات • أرشيف • أدوات
+
+        <br><br>
+
+        © 2026 جميع الحقوق محفوظة
+
+    </footer>
+
+
+    <script>
+
+        function searchPrograms() {
+
+            const input =
+                document.getElementById("searchInput").value
+                .trim()
+                .toLowerCase();
+
+            const programs =
+                document.querySelectorAll(".program");
+
+            programs.forEach(function(program) {
+
+                const text =
+                    program.innerText.toLowerCase();
+
+                if (input === "" || text.includes(input)) {
+                    program.style.display = "";
+                } else {
+                    program.style.display = "none";
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+  </html>
