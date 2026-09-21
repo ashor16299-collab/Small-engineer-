@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML | المهندس الصغير</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f97316, #dc2626);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 19px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px 15px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #dc2626;
+        }
+
+        pre {
+            direction: ltr;
+            text-align: left;
+            background: #111827;
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        .back {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌐 تعلم HTML</h1>
+    <p>ابدأ في بناء صفحات الويب 🚀</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <h2>👋 ما هي HTML؟</h2>
+
+        <p>
+            HTML هي اللغة الأساسية المستخدمة في بناء هيكل صفحات الويب.
+            من خلالها نضيف العناوين والنصوص والصور والروابط وغيرها.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>🏗️ أول صفحة HTML</h2>
+
+        <p>هذا هو الهيكل الأساسي لصفحة HTML:</p>
+
+        <pre>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;صفحتي&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;مرحبًا بالعالم&lt;/h1&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="card">
+        <h2>📝 العناوين</h2>
+
+        <p>
+            HTML تحتوي على عناوين من h1 إلى h6.
+        </p>
+
+        <pre>&lt;h1&gt;عنوان كبير&lt;/h1&gt;
+
+&lt;h2&gt;عنوان فرعي&lt;/h2&gt;
+
+&lt;h3&gt;عنوان أصغر&lt;/h3&gt;</pre>
+    </section>
+
+    <section class="card">
+        <h2>✍️ كتابة النصوص</h2>
+
+        <p>نستخدم الوسم <b>p</b> لكتابة الفقرات.</p>
+
+        <pre>&lt;p&gt;
+أنا أتعلم HTML في المهندس الصغير.
+&lt;/p&gt;</pre>
+    </section>
+
+    <section class="card">
+        <h2>🔗 الروابط</h2>
+
+        <p>يمكننا إنشاء رابط باستخدام الوسم a:</p>
+
+        <pre>&lt;a href="https://example.com"&gt;
+افتح الموقع
+&lt;/a&gt;</pre>
+    </section>
+
+    <section class="card">
+        <h2>🖼️ الصور</h2>
+
+        <p>نستخدم الوسم img لإضافة صورة:</p>
+
+        <pre>&lt;img src="image.jpg" alt="صورة"&gt;</pre>
+    </section>
+
+    <section class="card">
+        <h2>📋 القوائم</h2>
+
+        <p>مثال على قائمة:</p>
+
+        <pre>&lt;ul&gt;
+
+    &lt;li&gt;Python&lt;/li&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+
+&lt;/ul&gt;</pre>
+    </section>
+
+    <section class="card">
+        <h2>🔥 تحدي صغير</h2>
+
+        <p>
+            أنشئ صفحة تحتوي على:
+        </p>
+
+        <ul>
+            <li>عنوان باسمك</li>
+            <li>فقرة عن نفسك</li>
+            <li>رابط</li>
+            <li>قائمة بثلاثة أشياء تحبها</li>
+        </ul>
+    </section>
+
+    <a class="back" href="index.html">
+        🏠 العودة للرئيسية
+    </a>
+
+</main>
+
+<footer>
+    © 2026 المهندس الصغير 👨‍💻
+    <br>
+    تعلم • برمج • طوّر نفسك 🚀
+</footer>
+
+</body>
+</html>
